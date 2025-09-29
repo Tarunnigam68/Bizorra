@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bizorra - Premium E-commerce Products</title>
+    <meta name="description" content="Discover premium quality electronics, audio gear, wearables and smart home products at Bizorra. Free shipping, excellent customer service, and competitive prices.">
+    <meta name="keywords" content="electronics, audio, wearables, smart home, premium products, fast shipping">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1 class="logo-text">BIZORRA</h1>
+                    <p class="tagline">Premium E-commerce Experience</p>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="#shop" class="nav-link">Shop</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="cart-toggle btn btn--outline" id="cartToggle">
+                        Cart (<span id="cartCount">0</span>)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home Section -->
+        <section id="home" class="section hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Discover Premium Quality Products</h1>
+                    <p class="hero-subtitle">Exceptional design and unmatched value for modern lifestyle</p>
+                    <div class="hero-actions">
+                        <a href="#shop" class="btn btn--primary btn--lg">Shop Now</a>
+                        <a href="#about" class="btn btn--outline btn--lg">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="section featured-products">
+            <div class="container">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="products-grid" id="featuredProducts">
+                    <!-- Products will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section categories">
+            <div class="container">
+                <h2 class="section-title">Shop by Category</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-icon">🎵</div>
+                        <h3>Audio</h3>
+                        <p>Headphones, speakers, and audio accessories</p>
+                        <span class="category-count">15 products</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">⌚</div>
+                        <h3>Wearables</h3>
+                        <p>Smartwatches and fitness trackers</p>
+                        <span class="category-count">12 products</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🔌</div>
+                        <h3>Accessories</h3>
+                        <p>Cables, chargers, and tech accessories</p>
+                        <span class="category-count">25 products</span>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🏠</div>
+                        <h3>Smart Home</h3>
+                        <p>Connected devices for your home</p>
+                        <span class="category-count">18 products</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Amazing product quality and lightning-fast shipping. The customer service team went above and beyond!"</p>
+                        <div class="testimonial-author">
+                            <strong>Sarah Johnson</strong>
+                            <span>New York, NY</span>
+                            <span class="verified">✓ Verified Purchase</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Incredible selection and competitive prices. I've been a loyal customer for over 2 years now."</p>
+                        <div class="testimonial-author">
+                            <strong>Mike Chen</strong>
+                            <span>Los Angeles, CA</span>
+                            <span class="verified">✓ Verified Purchase</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"The modern design and functionality of Bizorra products are unmatched. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <strong>Emily Rodriguez</strong>
+                            <span>Chicago, IL</span>
+                            <span class="verified">✓ Verified Purchase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Section -->
+        <section id="shop" class="section shop hidden">
+            <div class="container">
+                <h2 class="section-title">Shop All Products</h2>
+                <div class="shop-filters">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Category:</label>
+                        <select id="categoryFilter" class="form-control">
+                            <option value="">All Categories</option>
+                            <option value="Audio">Audio</option>
+                            <option value="Wearables">Wearables</option>
+                            <option value="Accessories">Accessories</option>
+                            <option value="Smart Home">Smart Home</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sortFilter">Sort by:</label>
+                        <select id="sortFilter" class="form-control">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Rating</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <input type="text" id="searchFilter" class="form-control" placeholder="Search products...">
+                    </div>
+                </div>
+                <div class="products-grid" id="shopProducts">
+                    <!-- Products will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about hidden">
+            <div class="container">
+                <h2 class="section-title">About Bizorra</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Our Story</h3>
+                        <p>Founded in 2020, Bizorra has been dedicated to providing premium quality products with exceptional design and unmatched value. We carefully curate our selection to ensure every product meets our high standards.</p>
+                        
+                        <h3>Our Mission</h3>
+                        <p>To deliver premium e-commerce experiences that exceed customer expectations through innovative products, exceptional service, and seamless shopping.</p>
+                        
+                        <h3>Why Choose Bizorra?</h3>
+                        <ul class="features-list">
+                            <li>Premium quality products</li>
+                            <li>Fast and reliable shipping</li>
+                            <li>Exceptional customer service</li>
+                            <li>Competitive pricing</li>
+                            <li>30-day return policy</li>
+                            <li>Secure payment processing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact hidden">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <strong>Email:</strong> contact@bizorra.com
+                            </div>
+                            <div class="contact-item">
+                                <strong>Phone:</strong> +1 (555) 123-4567
+                            </div>
+                            <div class="contact-item">
+                                <strong>WhatsApp:</strong> +1 (555) 123-4567
+                            </div>
+                            <div class="contact-item">
+                                <strong>Address:</strong> 123 Commerce Street, Business District, City 12345
+                            </div>
+                            <div class="contact-item">
+                                <strong>Hours:</strong> Mon-Fri: 9AM-6PM, Sat-Sun: 10AM-4PM
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://facebook.com/bizorra" target="_blank">Facebook</a>
+                            <a href="https://instagram.com/bizorra" target="_blank">Instagram</a>
+                            <a href="https://twitter.com/bizorra" target="_blank">Twitter</a>
+                            <a href="https://linkedin.com/company/bizorra" target="_blank">LinkedIn</a>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="fullName" class="form-label">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Enter your full name" required>
+                                <div class="error-message" id="fullNameError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" required>
+                                <div class="error-message" id="emailError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+1 (555) 123-4567">
+                                <div class="error-message" id="phoneError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <input type="text" id="subject" name="subject" class="form-control" placeholder="How can we help you?" required>
+                                <div class="error-message" id="subjectError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea id="message" name="message" class="form-control" rows="5" placeholder="Tell us more about your inquiry..." required></textarea>
+                                <div class="error-message" id="messageError"></div>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+                        </form>
+                        <div id="formMessages" class="form-messages"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="modal hidden">
+        <div class="modal-backdrop" id="cartBackdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Shopping Cart</h3>
+                <button class="modal-close" id="cartClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems" class="cart-items">
+                    <p class="empty-cart">Your cart is empty</p>
+                </div>
+                <div id="cartSummary" class="cart-summary hidden">
+                    <div class="cart-total">
+                        <strong>Total: $<span id="cartTotal">0.00</span></strong>
+                    </div>
+                    <div class="cart-actions">
+                        <button class="btn btn--primary btn--full-width">Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BIZORRA</h3>
+                    <p>Premium E-commerce Experience</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/bizorra" target="_blank">Facebook</a>
+                        <a href="https://instagram.com/bizorra" target="_blank">Instagram</a>
+                        <a href="https://twitter.com/bizorra" target="_blank">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bizorra. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
